@@ -1,0 +1,37 @@
+#默认配置文件
+DEFAULT:
+    setup: True
+    path: "D:\\cq\\openlava-server"
+
+#websocket配置文件
+websocket:
+    ip: "localhost"
+    port: 8080
+
+#openlava配置文件
+openlava:
+    model: "remote"
+    host_name: "10.188.1.78"
+    user_name: "root"
+    password: "smartcore"
+
+#task配置文件
+task:
+    - bjobs:
+        - command: "bjobs -u all"
+        - time: 5
+    - bhosts:
+        - command: "bhosts"
+        - time: 5
+    - bqueues:
+        - command: "bqueues"
+        - time: 5
+    - lsload:
+        - command: "lsload"
+        - time: 5
+    - lsclusters:
+        - command: "lsclusters"
+        - time: 5
+    - shell:
+        - command: "ls"
+        - time: 5
